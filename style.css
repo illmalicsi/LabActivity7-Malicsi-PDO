@@ -1,0 +1,280 @@
+:root {
+  --bg: #f7f7f8;
+  --card: #ffffff;
+  --border: #e5e5e8;
+  --text: #1a1a1a;
+  --muted: #777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+/* ---------- Base (login / register card) ---------- */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--card);
+  max-width: 360px;
+  margin: 80px auto;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--text);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+button {
+  width: 100%;
+  padding: 10px 16px;
+  background: var(--text);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+a {
+  color: var(--text);
+}
+
+p.small {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin: 16px 0 0;
+}
+
+.error {
+  color: #c62828;
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+.success {
+  color: #2e7d32;
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+/* ---------- Feed (homepage) ---------- */
+body.wide {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+body.wide h2 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+body.wide > form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.post {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.post h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.post p {
+  margin: 0 0 12px;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.meta a {
+  color: var(--muted);
+}
+
+.meta a:hover {
+  color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  background: #f0f0f2;
+  color: var(--muted);
+  padding: 1px 8px;
+  border-radius: 999px;
+  margin-left: 4px;
+}
+
+/* ---------- Comments ---------- */
+.comment {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment .meta {
+  margin: 0 0 2px;
+  font-size: 12px;
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.comment-form input {
+  margin: 0;
+  font-size: 14px;
+}
+
+.comment-form button {
+  width: auto;
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-row button {
+  width: auto;
+}
+
+.btn-cancel {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.btn-cancel:hover {
+  color: var(--text);
+}
+
+.inline-form {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: underline;
+  width: auto;
+  display: inline;
+}
+
+.btn-link:hover {
+  color: #c62828;
+}
+
+.empty-feed {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
+}
+
+.post-content {
+  word-break: break-word;
+}
